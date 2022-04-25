@@ -8,22 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		59A9AD8828169D560009A144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9AD8728169D560009A144 /* AppDelegate.swift */; };
-		59A9AD8A28169D560009A144 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9AD8928169D560009A144 /* SceneDelegate.swift */; };
 		59A9AD8C28169D560009A144 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9AD8B28169D560009A144 /* ViewController.swift */; };
-		59A9AD8F28169D560009A144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A9AD8D28169D560009A144 /* Main.storyboard */; };
 		59A9AD9128169D580009A144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A9AD9028169D580009A144 /* Assets.xcassets */; };
 		59A9AD9428169D580009A144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A9AD9228169D580009A144 /* LaunchScreen.storyboard */; };
+		59A9ADA32816D0B60009A144 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADA22816D0B60009A144 /* Titles.swift */; };
+		59A9ADA62816D4A30009A144 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADA52816D4A30009A144 /* NetworkManager.swift */; };
+		59A9ADA82816D6DE0009A144 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADA72816D6DE0009A144 /* Asteroid.swift */; };
+		59A9ADAA2816D8960009A144 /* NearEarthObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADA92816D8960009A144 /* NearEarthObjects.swift */; };
+		59A9ADAC2816DB4B0009A144 /* EstimatedDiameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADAB2816DB4B0009A144 /* EstimatedDiameter.swift */; };
+		59A9ADAE2816DBA20009A144 /* CloseApproachData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADAD2816DBA20009A144 /* CloseApproachData.swift */; };
+		59A9ADB02816DD580009A144 /* Meters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADAF2816DD580009A144 /* Meters.swift */; };
+		59A9ADB22816F59F0009A144 /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADB12816F59F0009A144 /* RelativeVelocity.swift */; };
+		59A9ADB42816F5C20009A144 /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADB32816F5C20009A144 /* MissDistance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		59A9AD8428169D560009A144 /* Armagedon2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Armagedon2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A9AD8728169D560009A144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59A9AD8928169D560009A144 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		59A9AD8B28169D560009A144 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		59A9AD8E28169D560009A144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59A9AD9028169D580009A144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59A9AD9328169D580009A144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59A9AD9528169D580009A144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59A9ADA22816D0B60009A144 /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
+		59A9ADA52816D4A30009A144 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		59A9ADA72816D6DE0009A144 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
+		59A9ADA92816D8960009A144 /* NearEarthObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjects.swift; sourceTree = "<group>"; };
+		59A9ADAB2816DB4B0009A144 /* EstimatedDiameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameter.swift; sourceTree = "<group>"; };
+		59A9ADAD2816DBA20009A144 /* CloseApproachData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseApproachData.swift; sourceTree = "<group>"; };
+		59A9ADAF2816DD580009A144 /* Meters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meters.swift; sourceTree = "<group>"; };
+		59A9ADB12816F59F0009A144 /* RelativeVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
+		59A9ADB32816F5C20009A144 /* MissDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,86 @@
 		59A9AD8628169D560009A144 /* Armagedon2022 */ = {
 			isa = PBXGroup;
 			children = (
-				59A9AD8728169D560009A144 /* AppDelegate.swift */,
-				59A9AD8928169D560009A144 /* SceneDelegate.swift */,
-				59A9AD8B28169D560009A144 /* ViewController.swift */,
-				59A9AD8D28169D560009A144 /* Main.storyboard */,
-				59A9AD9028169D580009A144 /* Assets.xcassets */,
-				59A9AD9228169D580009A144 /* LaunchScreen.storyboard */,
-				59A9AD9528169D580009A144 /* Info.plist */,
+				59A9ADA42816D48C0009A144 /* Services */,
+				59A9ADA02816D08F0009A144 /* Helpers */,
+				59A9AD9F28169F9A0009A144 /* Models */,
+				59A9AD9B28169D690009A144 /* Controllers */,
+				59A9AD9D28169D970009A144 /* Resources */,
+				59A9AD9C28169D760009A144 /* SupportFiles */,
+				59A9AD9E28169DA30009A144 /* Storyboards */,
 			);
 			path = Armagedon2022;
+			sourceTree = "<group>";
+		};
+		59A9AD9B28169D690009A144 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59A9AD8B28169D560009A144 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		59A9AD9C28169D760009A144 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				59A9AD8728169D560009A144 /* AppDelegate.swift */,
+				59A9AD9528169D580009A144 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		59A9AD9D28169D970009A144 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59A9AD9028169D580009A144 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59A9AD9E28169DA30009A144 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				59A9AD9228169D580009A144 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		59A9AD9F28169F9A0009A144 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADA72816D6DE0009A144 /* Asteroid.swift */,
+				59A9ADA92816D8960009A144 /* NearEarthObjects.swift */,
+				59A9ADAB2816DB4B0009A144 /* EstimatedDiameter.swift */,
+				59A9ADAD2816DBA20009A144 /* CloseApproachData.swift */,
+				59A9ADAF2816DD580009A144 /* Meters.swift */,
+				59A9ADB12816F59F0009A144 /* RelativeVelocity.swift */,
+				59A9ADB32816F5C20009A144 /* MissDistance.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59A9ADA02816D08F0009A144 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADA12816D09C0009A144 /* Titles */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		59A9ADA12816D09C0009A144 /* Titles */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADA22816D0B60009A144 /* Titles.swift */,
+			);
+			path = Titles;
+			sourceTree = "<group>";
+		};
+		59A9ADA42816D48C0009A144 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADA52816D4A30009A144 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +212,6 @@
 			files = (
 				59A9AD9428169D580009A144 /* LaunchScreen.storyboard in Resources */,
 				59A9AD9128169D580009A144 /* Assets.xcassets in Resources */,
-				59A9AD8F28169D560009A144 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +222,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A9ADAE2816DBA20009A144 /* CloseApproachData.swift in Sources */,
+				59A9ADA62816D4A30009A144 /* NetworkManager.swift in Sources */,
+				59A9ADA32816D0B60009A144 /* Titles.swift in Sources */,
 				59A9AD8C28169D560009A144 /* ViewController.swift in Sources */,
+				59A9ADB22816F59F0009A144 /* RelativeVelocity.swift in Sources */,
+				59A9ADB02816DD580009A144 /* Meters.swift in Sources */,
+				59A9ADAA2816D8960009A144 /* NearEarthObjects.swift in Sources */,
+				59A9ADAC2816DB4B0009A144 /* EstimatedDiameter.swift in Sources */,
 				59A9AD8828169D560009A144 /* AppDelegate.swift in Sources */,
-				59A9AD8A28169D560009A144 /* SceneDelegate.swift in Sources */,
+				59A9ADB42816F5C20009A144 /* MissDistance.swift in Sources */,
+				59A9ADA82816D6DE0009A144 /* Asteroid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		59A9AD8D28169D560009A144 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59A9AD8E28169D560009A144 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		59A9AD9228169D580009A144 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,12 +375,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XK5S24922;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Armagedon2022/Info.plist;
+				INFOPLIST_FILE = Armagedon2022/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,12 +403,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4XK5S24922;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Armagedon2022/Info.plist;
+				INFOPLIST_FILE = Armagedon2022/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
