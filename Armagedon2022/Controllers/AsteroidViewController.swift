@@ -126,6 +126,14 @@ extension AsteroidViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         350
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let asteroidDetailsViewController = AsteroidDetailsViewController(nearObjectsData: isDangerous ? dangerousAsteroids[indexPath.section] : asteroidsData[indexPath.section])
+        
+        navigationController?.pushViewController(asteroidDetailsViewController, animated: true)
+    }
 
 }
 

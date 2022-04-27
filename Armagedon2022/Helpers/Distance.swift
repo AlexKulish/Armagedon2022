@@ -14,9 +14,9 @@ enum Distance: Int, CaseIterable {
     var distanceFormat: String {
         switch self {
         case .kilometers:
-            return "л.орб"
-        case .lunar:
             return "км"
+        case .lunar:
+            return "л.орб"
         }
         
     }

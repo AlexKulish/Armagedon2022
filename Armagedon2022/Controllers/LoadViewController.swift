@@ -61,9 +61,7 @@ class LoadViewController: UIViewController {
         NetworkManager.shared.fetchData { [weak self] asteroid in
             guard let self = self else { return }
             self.asteroid = asteroid
-            self.present(self.setupTabBarAndNavigationBar(), animated: true, completion: nil)
-            
-            print(asteroid)
+            self.present(self.setupTabBarAndNavigationBar(), animated: true, completion: nil)            
         }
     }
 }

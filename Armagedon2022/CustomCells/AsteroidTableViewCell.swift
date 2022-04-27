@@ -31,7 +31,6 @@ class AsteroidTableViewCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        //view.isUserInteractionEnabled = true //автоматом тру
         return view
     }()
     

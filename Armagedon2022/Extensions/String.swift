@@ -36,4 +36,9 @@ extension String {
         return filtered.joined(separator: " ")
     }
     
+    var removeFractional: Self {
+        let mainPart = self.components(separatedBy: ".").first
+        return mainPart ?? self
+    }
+    
 }
