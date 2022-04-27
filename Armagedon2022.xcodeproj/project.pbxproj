@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59A9AD8828169D560009A144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9AD8728169D560009A144 /* AppDelegate.swift */; };
-		59A9AD8C28169D560009A144 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9AD8B28169D560009A144 /* ViewController.swift */; };
+		59A9AD8C28169D560009A144 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9AD8B28169D560009A144 /* LoadViewController.swift */; };
 		59A9AD9128169D580009A144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59A9AD9028169D580009A144 /* Assets.xcassets */; };
 		59A9AD9428169D580009A144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59A9AD9228169D580009A144 /* LaunchScreen.storyboard */; };
 		59A9ADA32816D0B60009A144 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADA22816D0B60009A144 /* Titles.swift */; };
@@ -20,12 +20,21 @@
 		59A9ADB02816DD580009A144 /* Meters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADAF2816DD580009A144 /* Meters.swift */; };
 		59A9ADB22816F59F0009A144 /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADB12816F59F0009A144 /* RelativeVelocity.swift */; };
 		59A9ADB42816F5C20009A144 /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADB32816F5C20009A144 /* MissDistance.swift */; };
+		59A9ADB72817E40E0009A144 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADB62817E40E0009A144 /* Date.swift */; };
+		59A9ADB92817E6F00009A144 /* AsteroidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADB82817E6F00009A144 /* AsteroidViewController.swift */; };
+		59A9ADBB2817EAF80009A144 /* DestroyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADBA2817EAF80009A144 /* DestroyViewController.swift */; };
+		59A9ADBD2817FD710009A144 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADBC2817FD710009A144 /* Distance.swift */; };
+		59A9ADC028181C9A0009A144 /* AsteroidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADBF28181C9A0009A144 /* AsteroidTableViewCell.swift */; };
+		59A9ADC228182D8C0009A144 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADC128182D8C0009A144 /* String.swift */; };
+		59A9ADC428182FC60009A144 /* AsteroidSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADC328182FC60009A144 /* AsteroidSize.swift */; };
+		59A9ADC72818355B0009A144 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADC62818355B0009A144 /* UILabel.swift */; };
+		59A9ADC9281839260009A144 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADC8281839260009A144 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		59A9AD8428169D560009A144 /* Armagedon2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Armagedon2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A9AD8728169D560009A144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59A9AD8B28169D560009A144 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59A9AD8B28169D560009A144 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		59A9AD9028169D580009A144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59A9AD9328169D580009A144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59A9AD9528169D580009A144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +47,15 @@
 		59A9ADAF2816DD580009A144 /* Meters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meters.swift; sourceTree = "<group>"; };
 		59A9ADB12816F59F0009A144 /* RelativeVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
 		59A9ADB32816F5C20009A144 /* MissDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
+		59A9ADB62817E40E0009A144 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		59A9ADB82817E6F00009A144 /* AsteroidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewController.swift; sourceTree = "<group>"; };
+		59A9ADBA2817EAF80009A144 /* DestroyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestroyViewController.swift; sourceTree = "<group>"; };
+		59A9ADBC2817FD710009A144 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		59A9ADBF28181C9A0009A144 /* AsteroidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidTableViewCell.swift; sourceTree = "<group>"; };
+		59A9ADC128182D8C0009A144 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		59A9ADC328182FC60009A144 /* AsteroidSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidSize.swift; sourceTree = "<group>"; };
+		59A9ADC62818355B0009A144 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		59A9ADC8281839260009A144 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,8 @@
 		59A9AD8628169D560009A144 /* Armagedon2022 */ = {
 			isa = PBXGroup;
 			children = (
+				59A9ADBE28181C6E0009A144 /* CustomCells */,
+				59A9ADB52817E3FB0009A144 /* Extensions */,
 				59A9ADA42816D48C0009A144 /* Services */,
 				59A9ADA02816D08F0009A144 /* Helpers */,
 				59A9AD9F28169F9A0009A144 /* Models */,
@@ -84,7 +104,9 @@
 		59A9AD9B28169D690009A144 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				59A9AD8B28169D560009A144 /* ViewController.swift */,
+				59A9AD8B28169D560009A144 /* LoadViewController.swift */,
+				59A9ADB82817E6F00009A144 /* AsteroidViewController.swift */,
+				59A9ADBA2817EAF80009A144 /* DestroyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,7 +153,9 @@
 		59A9ADA02816D08F0009A144 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				59A9ADC528182FEE0009A144 /* ImageSize */,
 				59A9ADA12816D09C0009A144 /* Titles */,
+				59A9ADBC2817FD710009A144 /* Distance.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -150,6 +174,33 @@
 				59A9ADA52816D4A30009A144 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		59A9ADB52817E3FB0009A144 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADB62817E40E0009A144 /* Date.swift */,
+				59A9ADC128182D8C0009A144 /* String.swift */,
+				59A9ADC62818355B0009A144 /* UILabel.swift */,
+				59A9ADC8281839260009A144 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59A9ADBE28181C6E0009A144 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADBF28181C9A0009A144 /* AsteroidTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		59A9ADC528182FEE0009A144 /* ImageSize */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADC328182FC60009A144 /* AsteroidSize.swift */,
+			);
+			path = ImageSize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,17 +273,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A9ADC9281839260009A144 /* UIView.swift in Sources */,
 				59A9ADAE2816DBA20009A144 /* CloseApproachData.swift in Sources */,
 				59A9ADA62816D4A30009A144 /* NetworkManager.swift in Sources */,
 				59A9ADA32816D0B60009A144 /* Titles.swift in Sources */,
-				59A9AD8C28169D560009A144 /* ViewController.swift in Sources */,
+				59A9ADC428182FC60009A144 /* AsteroidSize.swift in Sources */,
+				59A9AD8C28169D560009A144 /* LoadViewController.swift in Sources */,
+				59A9ADC028181C9A0009A144 /* AsteroidTableViewCell.swift in Sources */,
+				59A9ADB92817E6F00009A144 /* AsteroidViewController.swift in Sources */,
+				59A9ADC72818355B0009A144 /* UILabel.swift in Sources */,
 				59A9ADB22816F59F0009A144 /* RelativeVelocity.swift in Sources */,
 				59A9ADB02816DD580009A144 /* Meters.swift in Sources */,
 				59A9ADAA2816D8960009A144 /* NearEarthObjects.swift in Sources */,
+				59A9ADB72817E40E0009A144 /* Date.swift in Sources */,
+				59A9ADBD2817FD710009A144 /* Distance.swift in Sources */,
 				59A9ADAC2816DB4B0009A144 /* EstimatedDiameter.swift in Sources */,
 				59A9AD8828169D560009A144 /* AppDelegate.swift in Sources */,
 				59A9ADB42816F5C20009A144 /* MissDistance.swift in Sources */,
+				59A9ADC228182D8C0009A144 /* String.swift in Sources */,
 				59A9ADA82816D6DE0009A144 /* Asteroid.swift in Sources */,
+				59A9ADBB2817EAF80009A144 /* DestroyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

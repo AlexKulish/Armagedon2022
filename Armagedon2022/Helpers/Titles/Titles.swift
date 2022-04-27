@@ -20,7 +20,7 @@ enum Titles: String {
         
         switch self {
         case .destroy:
-            return "Уничтожение"
+            return "Уничтожить"
         case .asteroid:
              return "Астероиды"
         case .armagedon:

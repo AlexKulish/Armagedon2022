@@ -13,19 +13,21 @@ enum NetworkError: Error {
     case decodingError
 }
 
-enum Link: String {
-    case asteroidAPI = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2022-04-25&end_date=2022-04-25&api_key=8BWMdmFWRW1Z97VocbBap33KHmhqxKAlqdpfnZ1o"
-}
-
-class NetworkManager: Codable {
+class NetworkManager {
     
     static let shared = NetworkManager()
+    var requestDay = Date()
+    var correctRequestDay: String {
+        requestDay.getCorrectDate("yyyy-MM-dd")
+    }
     
     private init() {}
     
-    func fetchData(from url: String?, completion: @escaping (Asteroid) -> Void) {
+    func fetchData(completion: @escaping (Asteroid) -> Void) {
         
-        guard let url = URL(string: url ?? "") else { return }
+        let asteroidAPI = "https://api.nasa.gov/neo/rest/v1/feed?start_date=\(correctRequestDay)&end_date=\(correctRequestDay)&api_key=8BWMdmFWRW1Z97VocbBap33KHmhqxKAlqdpfnZ1o"
+        
+        guard let url = URL(string: asteroidAPI) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
