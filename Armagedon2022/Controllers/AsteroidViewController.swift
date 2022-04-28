@@ -96,7 +96,9 @@ class AsteroidViewController: UIViewController {
     }
     
     @objc private func rightBarButtonTapped() {
-        
+        let filterViewController = FilterViewController()
+        filterViewController.delegate = self
+        navigationController?.pushViewController(filterViewController, animated: true)
     }
     
 }
@@ -154,7 +156,14 @@ extension AsteroidViewController: AsteroidTableViewCellDelegate {
     func destroyButtonTapped(index: Int) {
         print("Hello")
     }
-    
+}
 
+extension AsteroidViewController: FilterViewControllerDelegate {
     
+    func filterDidSelected(with distance: Distance, and isDangerous: Bool) {
+        self.distance = distance
+        self.isDangerous = isDangerous
+        asteroidTableView.reloadData()
+        fetchDataByScroll()
+    }
 }
