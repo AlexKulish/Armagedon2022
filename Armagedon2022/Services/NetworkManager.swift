@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case noData
-    case invalidUrl
-    case decodingError
-}
-
 class NetworkManager {
     
     static let shared = NetworkManager()

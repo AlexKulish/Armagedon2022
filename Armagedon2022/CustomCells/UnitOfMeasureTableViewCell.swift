@@ -13,7 +13,12 @@ protocol UnitOfMeasureTableViewCellDelegate: AnyObject {
 
 class UnitOfMeasureTableViewCell: UITableViewCell {
     
+    // MARK: - Public properties
+    
     weak var delegate: UnitOfMeasureTableViewCellDelegate?
+    
+    // MARK: - Private properties
+    
     private var settings: SettingsButtonsManager?
     
     private lazy var unitOfMeasureDescriptionLabel: UILabel = {
@@ -33,6 +38,8 @@ class UnitOfMeasureTableViewCell: UITableViewCell {
         return segmentedControl
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .systemGray5
@@ -46,11 +53,7 @@ class UnitOfMeasureTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc private func unitOfMeasureValueChanged() {
-        let index = unitOfMeasureSegmentedControl.selectedSegmentIndex
-        let format = Distance.getFormat(atIndex: index)
-        delegate?.changeDistanceFormat(distance: format, index: index)
-    }
+    // MARK: - Private methods
     
     private func addSubview() {
         contentView.addSubview(unitOfMeasureDescriptionLabel)
@@ -73,4 +76,9 @@ class UnitOfMeasureTableViewCell: UITableViewCell {
         ])
     }
     
+    @objc private func unitOfMeasureValueChanged() {
+        let index = unitOfMeasureSegmentedControl.selectedSegmentIndex
+        let format = Distance.getFormat(atIndex: index)
+        delegate?.changeDistanceFormat(distance: format, index: index)
+    }
 }

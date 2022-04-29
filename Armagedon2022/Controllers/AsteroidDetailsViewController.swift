@@ -9,6 +9,8 @@ import UIKit
 
 class AsteroidDetailsViewController: UIViewController {
     
+    // MARK: - Private properties
+    
     private var nearObjectsData: NearEarthObjects?
     
     private lazy var asteroidDetailsTableView: UITableView = {
@@ -20,6 +22,8 @@ class AsteroidDetailsViewController: UIViewController {
         tableView.register(AsteroidDetailsTableViewCell.self, forCellReuseIdentifier: "asteroidDetails")
         return tableView
     }()
+    
+    // MARK: - Initializers
     
     init(nearObjectsData: NearEarthObjects?) {
         guard let nearObjectsData = nearObjectsData else {
@@ -34,6 +38,8 @@ class AsteroidDetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -41,6 +47,8 @@ class AsteroidDetailsViewController: UIViewController {
         view.addSubview(asteroidDetailsTableView)
         setupConstrains()
     }
+    
+    // MARK: - Private methods
     
     private func setupNavigationController() {
         let appearance = UINavigationBarAppearance()
@@ -63,10 +71,9 @@ class AsteroidDetailsViewController: UIViewController {
             asteroidDetailsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
-    
-    
 }
+
+// MARK: - UITableViewDelegate and UITableViewDataSource
 
 extension AsteroidDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,6 +105,4 @@ extension AsteroidDetailsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-    
-    
 }

@@ -13,7 +13,12 @@ protocol DangerousTableViewCellDelegate: AnyObject {
 
 class DangerousTableViewCell: UITableViewCell {
     
+    // MARK: - Public properties
+    
     weak var delegate: DangerousTableViewCellDelegate?
+    
+    // MARK: - Private properties
+    
     private var settings: SettingsButtonsManager?
     
     private lazy var dangerLabel: UILabel = {
@@ -31,6 +36,8 @@ class DangerousTableViewCell: UITableViewCell {
         return dangerSwitch
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .systemGray5
@@ -44,9 +51,7 @@ class DangerousTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc private func dangerSwitchChanged() {
-        delegate?.setOnlyDangerousAsteroid(isDangerous: dangerSwitch.isOn)
-    }
+    // MARK: - Private methods
     
     private func addSubview() {
         contentView.addSubview(dangerLabel)
@@ -69,4 +74,7 @@ class DangerousTableViewCell: UITableViewCell {
         ])
     }
     
+    @objc private func dangerSwitchChanged() {
+        delegate?.setOnlyDangerousAsteroid(isDangerous: dangerSwitch.isOn)
+    }
 }

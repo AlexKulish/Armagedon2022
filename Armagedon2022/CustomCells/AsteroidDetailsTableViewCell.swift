@@ -9,12 +9,16 @@ import UIKit
 
 class AsteroidDetailsTableViewCell: UITableViewCell {
     
+    // MARK: - Private properties
+    
     private let asteroidDetailsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         return label
     }()
+    
+    // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,6 +31,8 @@ class AsteroidDetailsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private methods
+    
     private func setupConstrains() {
         NSLayoutConstraint.activate([
             asteroidDetailsLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -35,6 +41,8 @@ class AsteroidDetailsTableViewCell: UITableViewCell {
             asteroidDetailsLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
+    
+    // MARK: - Public methods
     
     func configure(for asteroidDetailsData: NearEarthObjects, detailsType: DetailsDataTypes, index: Int) {
         asteroidDetailsLabel.text = DetailsDataTypes.getRow(index: index).title + ": " + detailsType.getValue(from: asteroidDetailsData)

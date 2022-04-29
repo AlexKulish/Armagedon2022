@@ -39,6 +39,9 @@
 		59A9ADDA281A9BED0009A144 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADD9281A9BED0009A144 /* SettingsManager.swift */; };
 		59A9ADDC281A9CCC0009A144 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADDB281A9CCC0009A144 /* UserDefaults.swift */; };
 		59A9ADDE281AA0FB0009A144 /* DangerousTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADDD281AA0FB0009A144 /* DangerousTableViewCell.swift */; };
+		59A9ADE0281B36E50009A144 /* DestroyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADDF281B36E50009A144 /* DestroyTableViewCell.swift */; };
+		59A9ADE2281B37030009A144 /* AlertsTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADE1281B37030009A144 /* AlertsTitles.swift */; };
+		59A9ADE4281B37280009A144 /* DestroyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9ADE3281B37280009A144 /* DestroyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		59A9ADD9281A9BED0009A144 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		59A9ADDB281A9CCC0009A144 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		59A9ADDD281AA0FB0009A144 /* DangerousTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousTableViewCell.swift; sourceTree = "<group>"; };
+		59A9ADDF281B36E50009A144 /* DestroyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestroyTableViewCell.swift; sourceTree = "<group>"; };
+		59A9ADE1281B37030009A144 /* AlertsTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTitles.swift; sourceTree = "<group>"; };
+		59A9ADE3281B37280009A144 /* DestroyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestroyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,11 +181,11 @@
 		59A9ADA02816D08F0009A144 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				59A9ADE6281B38C80009A144 /* DistanceFormat */,
+				59A9ADE5281B38BB0009A144 /* Settings */,
 				59A9ADCC28196D760009A144 /* DetailsDataTypes */,
 				59A9ADC528182FEE0009A144 /* ImageSize */,
 				59A9ADA12816D09C0009A144 /* Titles */,
-				59A9ADBC2817FD710009A144 /* Distance.swift */,
-				59A9ADD7281A98A60009A144 /* SetingsUnitOfMeasureAndDangerous.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				59A9ADA22816D0B60009A144 /* Titles.swift */,
+				59A9ADE1281B37030009A144 /* AlertsTitles.swift */,
 			);
 			path = Titles;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 				59A9ADA52816D4A30009A144 /* NetworkManager.swift */,
 				59A9ADD5281A95D60009A144 /* SettingsButtonsManager.swift */,
 				59A9ADD9281A9BED0009A144 /* SettingsManager.swift */,
+				59A9ADE3281B37280009A144 /* DestroyManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 				59A9ADCF281972330009A144 /* AsteroidDetailsTableViewCell.swift */,
 				59A9ADD3281A94FF0009A144 /* UnitOfMeasureTableViewCell.swift */,
 				59A9ADDD281AA0FB0009A144 /* DangerousTableViewCell.swift */,
+				59A9ADDF281B36E50009A144 /* DestroyTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -239,6 +248,22 @@
 				59A9ADCD28196D8A0009A144 /* DetailsDataTypes.swift */,
 			);
 			path = DetailsDataTypes;
+			sourceTree = "<group>";
+		};
+		59A9ADE5281B38BB0009A144 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADD7281A98A60009A144 /* SetingsUnitOfMeasureAndDangerous.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		59A9ADE6281B38C80009A144 /* DistanceFormat */ = {
+			isa = PBXGroup;
+			children = (
+				59A9ADBC2817FD710009A144 /* Distance.swift */,
+			);
+			path = DistanceFormat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +349,7 @@
 				59A9ADC028181C9A0009A144 /* AsteroidTableViewCell.swift in Sources */,
 				59A9ADD0281972330009A144 /* AsteroidDetailsTableViewCell.swift in Sources */,
 				59A9ADB92817E6F00009A144 /* AsteroidViewController.swift in Sources */,
+				59A9ADE2281B37030009A144 /* AlertsTitles.swift in Sources */,
 				59A9ADC72818355B0009A144 /* UILabel.swift in Sources */,
 				59A9ADB22816F59F0009A144 /* RelativeVelocity.swift in Sources */,
 				59A9ADB02816DD580009A144 /* Meters.swift in Sources */,
@@ -333,12 +359,14 @@
 				59A9ADBD2817FD710009A144 /* Distance.swift in Sources */,
 				59A9ADAC2816DB4B0009A144 /* EstimatedDiameter.swift in Sources */,
 				59A9AD8828169D560009A144 /* AppDelegate.swift in Sources */,
+				59A9ADE0281B36E50009A144 /* DestroyTableViewCell.swift in Sources */,
 				59A9ADD22819889B0009A144 /* FilterViewController.swift in Sources */,
 				59A9ADB42816F5C20009A144 /* MissDistance.swift in Sources */,
 				59A9ADC228182D8C0009A144 /* String.swift in Sources */,
 				59A9ADDA281A9BED0009A144 /* SettingsManager.swift in Sources */,
 				59A9ADDE281AA0FB0009A144 /* DangerousTableViewCell.swift in Sources */,
 				59A9ADA82816D6DE0009A144 /* Asteroid.swift in Sources */,
+				59A9ADE4281B37280009A144 /* DestroyManager.swift in Sources */,
 				59A9ADCB28196B0C0009A144 /* AsteroidDetailsViewController.swift in Sources */,
 				59A9ADBB2817EAF80009A144 /* DestroyViewController.swift in Sources */,
 			);

@@ -13,13 +13,18 @@ protocol AsteroidViewControllerDelegate: AnyObject {
 
 class AsteroidViewController: UIViewController {
     
+    // MARK: - Public properties
+    
+    weak var delegate: AsteroidViewControllerDelegate?
+    
+    // MARK: - Private properties
+    
     private var asteroid: Asteroid?
     private var asteroidsData: [NearEarthObjects] = []
     private var dangerousAsteroids: [NearEarthObjects] = []
     private var distance: Distance?
     private var isPaging = true
     private var isDangerous = false
-    weak var delegate: AsteroidViewControllerDelegate?
     
     private lazy var asteroidTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -29,6 +34,8 @@ class AsteroidViewController: UIViewController {
         tableView.register(AsteroidTableViewCell.self, forCellReuseIdentifier: "asteroidTableViewCell")
         return tableView
     }()
+    
+    // MARK: - Initializers
     
     init(asteroid: Asteroid?) {
         self.asteroid = asteroid
@@ -41,6 +48,8 @@ class AsteroidViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -49,6 +58,8 @@ class AsteroidViewController: UIViewController {
         setupNavigationBar()
         
     }
+    
+    // MARK: - Private methods
     
     private func setupConstrains() {
         NSLayoutConstraint.activate([
@@ -103,6 +114,7 @@ class AsteroidViewController: UIViewController {
     
 }
 
+// MARK: - TableViewDelegate and UITableViewDataSource
 
 extension AsteroidViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -139,6 +151,8 @@ extension AsteroidViewController: UITableViewDelegate, UITableViewDataSource {
 
 }
 
+// MARK: - UIScrollViewDelegate
+
 extension AsteroidViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
@@ -150,13 +164,38 @@ extension AsteroidViewController: UIScrollViewDelegate {
     
 }
 
+// MARK: - AsteroidTableViewCellDelegate
+
 extension AsteroidViewController: AsteroidTableViewCellDelegate {
-    
-    
     func destroyButtonTapped(index: Int) {
-        print("Hello")
+        let indexPath = IndexPath(row: 0, section: index)
+        let correctRow = self.asteroidTableView.cellForRow(at: indexPath)
+        var removedObject: NearEarthObjects?
+        
+        UIView.animate(withDuration: 0.5) {
+            correctRow?.alpha = 0
+            correctRow?.isUserInteractionEnabled = false
+        } completion: { _ in
+            if self.isDangerous {
+                removedObject = self.dangerousAsteroids.remove(at: index)
+                self.asteroidsData.removeAll { nearObject in
+                    nearObject.name == removedObject?.name
+                }
+            } else {
+                removedObject = self.asteroidsData.remove(at: index)
+            }
+            
+            guard let removedObject = removedObject else { return }
+            DestroyManager.shared.destroyAsteroids.append(removedObject)
+            
+            self.fetchDataByScroll()
+            self.asteroidTableView.reloadData()
+            correctRow?.isUserInteractionEnabled = true
+        }
     }
 }
+
+// MARK: - FilterViewControllerDelegate
 
 extension AsteroidViewController: FilterViewControllerDelegate {
     

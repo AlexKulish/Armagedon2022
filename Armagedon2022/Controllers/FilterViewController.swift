@@ -13,7 +13,12 @@ protocol FilterViewControllerDelegate: AnyObject {
 
 class FilterViewController: UIViewController {
     
+    // MARK: - Public properties
+    
     weak var delegate: FilterViewControllerDelegate?
+    
+    // MARK: - Private properties
+    
     private var distance: Distance
     private var isDangerous: Bool
     private var selectedIndex = 0
@@ -27,6 +32,8 @@ class FilterViewController: UIViewController {
         tableView.register(DangerousTableViewCell.self, forCellReuseIdentifier: "dangerousCell")
         return tableView
     }()
+    
+    // MARK: - Initializers
     
     init() {
         guard let settings = SettingsManager.shared.loadSettingsButtons() else {
@@ -45,6 +52,8 @@ class FilterViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -52,6 +61,8 @@ class FilterViewController: UIViewController {
         view.addSubview(filterTableView)
         setupConstrains()
     }
+    
+    // MARK: - Private methods
     
     private func setupNavigationController() {
         let appearance = UINavigationBarAppearance()
@@ -88,6 +99,8 @@ class FilterViewController: UIViewController {
     
 }
 
+// MARK: - UITableViewDelegate and UITableViewDataSource
+
 extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,6 +126,8 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
         false
     }
 }
+
+// MARK: - UnitOfMeasureTableViewCellDelegate and DangerousTableViewCellDelegate
 
 extension FilterViewController: UnitOfMeasureTableViewCellDelegate, DangerousTableViewCellDelegate {
     

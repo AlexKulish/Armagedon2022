@@ -9,6 +9,8 @@ import UIKit
 
 class LoadViewController: UIViewController {
     
+    // MARK: - Private properties
+    
     private var asteroid: Asteroid?
     
     private let loadAsteroidImageView: UIImageView = {
@@ -19,12 +21,16 @@ class LoadViewController: UIViewController {
         return imageView
     }()
 
+    // MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(loadAsteroidImageView)
         fetchAsteroid()
         setupConstrains()
     }
+    
+    // MARK: - Private methods
     
     private func setupConstrains() {
         

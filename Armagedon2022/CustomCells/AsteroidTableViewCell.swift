@@ -13,7 +13,12 @@ protocol AsteroidTableViewCellDelegate: AnyObject {
 
 class AsteroidTableViewCell: UITableViewCell {
     
+    // MARK: - Public properties
+    
     weak var delegate: AsteroidTableViewCellDelegate?
+    
+    // MARK: - Private properties
+    
     private var gradientColors: [CGColor] = []
     private var index: Int?
     
@@ -80,6 +85,8 @@ class AsteroidTableViewCell: UITableViewCell {
         return label
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
@@ -89,6 +96,8 @@ class AsteroidTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Lifecycle methods
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -105,9 +114,7 @@ class AsteroidTableViewCell: UITableViewCell {
         }
     }
     
-    @objc private func destroyButtonTapped() {
-        delegate?.destroyButtonTapped(index: index ?? 0)
-    }
+    // MARK: - Private methods
     
     private func addSubviews() {
         contentView.addSubview(containerView)
@@ -124,7 +131,6 @@ class AsteroidTableViewCell: UITableViewCell {
     }
     
     private func setupConstrains() {
-        
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -187,8 +193,13 @@ class AsteroidTableViewCell: UITableViewCell {
             destroyButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
             destroyButton.bottomAnchor.constraint(equalTo: hazardLabel.bottomAnchor)
         ])
-        
     }
+    
+    @objc private func destroyButtonTapped() {
+        delegate?.destroyButtonTapped(index: index ?? 0)
+    }
+    
+    // MARK: - Public methods
     
     func configure(with asteroidData: NearEarthObjects, distance: Distance, index: Int) {
         self.index = index
